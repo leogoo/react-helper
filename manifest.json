@@ -1,0 +1,23 @@
+{
+  "name": "react-helper",
+  "description": "帮助react开发",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
